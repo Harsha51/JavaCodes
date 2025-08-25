@@ -6,7 +6,17 @@
 *               "10.0.0.3 - Robert [10/Dec/2000:04:21:28 -0500] \"GET /a.gif HTTP/1.0\" 200 234"
 *          
 *          o/p: 10.0.0.1, 10.0.0.3
+*
+*   As we don't require insertion order, but we consider the frequency of each Ip address we worked with HashMap.
+*   Using for-each loop we iterated over the string[] and the splitted it using split(), whereever  " "-emptyspace is present and it will create the array of string elements,
+*   from i/p we know that ipaddress is present first so we take the element at 0th index.
+*   Later, we insert elements into HashMap object using getOrDefault() method which checks for the particular key is present in hashmap object and if not a default value is given 
+*   and for the ip and increments +1 in our case.
+*   Step 2 - we use max() function of Collections class to get the max value from K,V pair.
+*   Step 3 - We used ArrayList object to store iPAddress which has count than maxCount of hashMap object
+*   Step 4 - if we have multiple ipaddrress in our resultset then we return ip address segregating with "," .
 */
+
 import java.util.*;
 import java.lang.*;
 import java.io.*;
